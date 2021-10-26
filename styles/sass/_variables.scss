@@ -1,0 +1,36 @@
+/* Colour palette */
+$brownGrey: #999;
+$black: #000;
+$white: #fff;
+$blackTwo: #333;
+$green: #64a604;
+
+/* Footer colour palette */
+$footer: #2e2e2e;
+$footerLast: #252525;
+$footerBorder: #474747;
+$footerInput: #535353;
+
+/* Blog colour palette */
+$border:#e5e5e5;
+$blogAuthor:#f6f6f6;
+$blogComment: #efefef;
+
+/* Text style catalog */
+@mixin raleWay($fontSize, $lineHeight, $letterSpacing, $color) {
+    font-family: 'Raleway', sans-serif;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    font-style:bold;
+    color: $color;
+}
+
+@mixin lora($fontSize, $lineHeight, $letterSpacing, $color, $justify) {
+    font-family: 'Lora', serif;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    color: $color;
+    text-align: $justify;
+}

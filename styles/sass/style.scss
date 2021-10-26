@@ -1,1 +1,37 @@
-h1 { color:black}
+@import 'normalize';
+@import '_variables';
+
+@import '_footer';
+@import '_blog';
+
+/* General styling */
+img {
+    display: block;
+}
+button {
+    margin:0;
+    padding:0;
+    border:none;
+}
+p {
+    @include lora(14px, 24px, 0.3px, $brownGrey, left);
+}
+.wrapper {
+    margin:0 auto;
+    max-width:1169px;
+    display:flex;
+    flex-direction: column;
+}
+
+.wrapper > section {
+    flex: 1;
+    padding:18px 0;
+}
+.wrapper > section:not(:nth-child(6)) {
+    padding:36px 0;
+}
+
+.wrapper > section:not(:nth-child(1n+5)) {
+    border-bottom:1px solid $border;
+}
+

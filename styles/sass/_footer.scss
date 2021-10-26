@@ -1,0 +1,88 @@
+/*
+THIS PARTIAL STYLESHEET IS FOR FOOTER
+*/
+
+/* Blog post styling */
+footer {
+    background-color: $footer;
+    .content {
+        margin-top:120px;
+        margin-bottom:100px;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: [row] auto [row];
+        gap:32.5px 160px;
+
+        /* Column header */
+        .colHeader {
+            grid-row: row;
+            h2 {
+                @include raleWay(24px, 24px, 0.5px, $green);
+            }
+            .header {
+                @include raleWay(16px, 16px, 0.5px, $white);
+            }
+        }
+        
+        /* Column content */
+        .col {
+            grid-row: row 2;
+            .row {
+               padding:15px 0; 
+            }
+            .row:not(:last-child) {
+                border-bottom:1px solid $footerBorder;
+            }
+
+            
+        }
+
+        /* Last column which holds the form needs to be vertically centered */
+        .col:last-child {
+            display:flex;
+            align-items: center;
+            .row {
+                margin-top:-50px;
+                padding:0 0 15px 0;
+                flex:1;
+                border-bottom:1px solid $footerBorder;
+                p {
+                    @include lora(13px, 44px, 0.3px, $brownGrey, left);
+                }
+                .subscribeForm {
+                    display:flex;
+                    #subscribeEmail {
+                        background-color: $footerInput;
+                        padding:15px;
+                        font-style: italic;
+                        @include lora(14px, 24px, 0.3px, $brownGrey, left);
+                        border:none;
+                        flex:2;
+                    }
+        
+                    #subscribeSubmit {
+                        background-color: $green;
+                        flex:1;
+                        color:$white;
+                        font-size:24px;
+                    }
+                }
+            }
+        }
+    }
+    .title {
+        margin-bottom: 14px;
+        h2 {
+            @include raleWay(24px, 24px, 0.5px, $black);
+        }  
+    } 
+    .footer {
+        background-color: $footerLast;
+        @include raleWay(18px, 24px, 0.5px, $brownGrey);
+        padding:30px 0;
+        .wrapper span {
+            color: $green;
+            display:inline-block;
+        }
+    }
+}
