@@ -4,6 +4,7 @@ THIS PARTIAL STYLESHEET IS FOR BLOG.HTML
 
 /* Blog post styling */
 section.blog {
+    margin-top:150px;
     .title {
         margin-bottom: 14px;
         h2 {
@@ -49,17 +50,21 @@ section.author {
     grid-template-columns: 169px 1fr;
     grid-gap: 30px;
     div {
-        background-color: $blogAuthor;
+        
         display:grid;
         grid-template-columns: 1fr;
-        align-items: center;
+        
         div {
             .name {
                 @include raleWay(16px, 16px, 0.5px, $blackTwo);
                 padding-bottom: 16px;
             }
         }
-    }  
+    }
+    div:not(:first-child) {
+        background-color: $blogAuthor;
+        align-items: center;
+    }
 }
 
 section.relatedPosts, section.comments, section.leaveComment {

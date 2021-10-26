@@ -8,6 +8,7 @@ $green: #64a604;
 
 /* Header bg image height sizes */
 $headerBlog:604px; 
+$headerContact:604px; 
 
 /* Footer colour palette */
 $footer: #2e2e2e;
@@ -19,6 +20,9 @@ $footerInput: #535353;
 $border:#e5e5e5;
 $blogAuthor:#f6f6f6;
 $blogComment: #efefef;
+
+/* Contact colour palette */
+$contactGrey: #f6f6f6;
 
 /* Text style catalog */
 @mixin raleWay($fontSize, $lineHeight, $letterSpacing, $color, $style:"") {

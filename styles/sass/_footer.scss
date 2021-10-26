@@ -36,41 +36,32 @@ footer {
             .row:not(:last-child) {
                 border-bottom:1px solid $footerBorder;
             }
-
             
-        }
 
-        /* Last column which holds the form needs to be vertically centered */
-        .col:last-child {
-            display:flex;
-            align-items: center;
-            .row {
-                margin-top:-50px;
-                padding:0 0 15px 0;
-                flex:1;
-                border-bottom:1px solid $footerBorder;
-                p {
-                    @include lora(13px, 44px, 0.3px, $lightGrey, left);
-                    color:$lightGrey;
+            .subscribeForm {
+                display:flex;
+                margin:20px 0;
+                #subscribeEmail {
+                    background-color: $footerInput;
+                    padding:15px;
+                    font-style: italic;
+                    @include lora(14px, 24px, 0.3px, $lightGrey, left);
+                    border:none;
+                    flex:2;
                 }
-                .subscribeForm {
-                    display:flex;
-                    #subscribeEmail {
-                        background-color: $footerInput;
-                        padding:15px;
-                        font-style: italic;
-                        @include lora(14px, 24px, 0.3px, $lightGrey, left);
-                        border:none;
-                        flex:2;
-                    }
-        
-                    #subscribeSubmit {
-                        background-color: $green;
-                        flex:1;
-                        color:$white;
-                        font-size:24px;
-                    }
+    
+                #subscribeSubmit {
+                    background-color: $green;
+                    flex:1;
+                    color:$white;
+                    font-size:24px;
                 }
+            }
+
+            span.socialLinks i {
+                margin-right:1em;
+                color:$white;
+                font-size:18px;
             }
         }
     }

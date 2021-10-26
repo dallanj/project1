@@ -220,6 +220,7 @@ h1, h2, h3, h4, p {
 /* Header bg image height sizes */
 /* Footer colour palette */
 /* Blog colour palette */
+/* Contact colour palette */
 /* Text style catalog */
 /*
 THIS PARTIAL STYLESHEET IS FOR FOOTER
@@ -237,7 +238,6 @@ footer .content {
   gap: 20px 160px;
   /* Column header */
   /* Column content */
-  /* Last column which holds the form needs to be vertically centered */
 }
 footer .content .colHeader {
   grid-row: row;
@@ -275,37 +275,13 @@ footer .content .col .row p {
 footer .content .col .row:not(:last-child) {
   border-bottom: 1px solid #474747;
 }
-footer .content .col:last-child {
+footer .content .col .subscribeForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 20px 0;
 }
-footer .content .col:last-child .row {
-  margin-top: -50px;
-  padding: 0 0 15px 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  border-bottom: 1px solid #474747;
-}
-footer .content .col:last-child .row p {
-  font-family: "Lora", serif;
-  font-size: 13px;
-  line-height: 44px;
-  letter-spacing: 0.3px;
-  color: #999;
-  text-align: left;
-  color: #999;
-}
-footer .content .col:last-child .row .subscribeForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-footer .content .col:last-child .row .subscribeForm #subscribeEmail {
+footer .content .col .subscribeForm #subscribeEmail {
   background-color: #535353;
   padding: 15px;
   font-style: italic;
@@ -320,13 +296,18 @@ footer .content .col:last-child .row .subscribeForm #subscribeEmail {
       -ms-flex: 2;
           flex: 2;
 }
-footer .content .col:last-child .row .subscribeForm #subscribeSubmit {
+footer .content .col .subscribeForm #subscribeSubmit {
   background-color: #64a604;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   color: #fff;
   font-size: 24px;
+}
+footer .content .col span.socialLinks i {
+  margin-right: 1em;
+  color: #fff;
+  font-size: 18px;
 }
 footer .footer {
   background-color: #252525;
@@ -355,6 +336,9 @@ footer .footer .wrapper .copyright span {
 THIS PARTIAL STYLESHEET IS FOR BLOG.HTML
 */
 /* Blog post styling */
+section.blog {
+  margin-top: 150px;
+}
 section.blog .title {
   margin-bottom: 14px;
 }
@@ -419,12 +403,8 @@ section.author {
   grid-gap: 30px;
 }
 section.author div {
-  background-color: #f6f6f6;
   display: grid;
   grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 section.author div div .name {
   font-family: "Raleway", sans-serif;
@@ -434,6 +414,12 @@ section.author div div .name {
   font-weight: bold;
   color: #333;
   padding-bottom: 16px;
+}
+section.author div:not(:first-child) {
+  background-color: #f6f6f6;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section.relatedPosts .header, section.relatedPosts span.author, section.comments .header, section.comments span.author, section.leaveComment .header, section.leaveComment span.author {
@@ -636,20 +622,27 @@ a {
 }
 
 /* Header */
-header {
+header.blog {
   background-image: url(../assets/blog-1.jpeg);
+  height: 604px;
+}
+
+header.contact {
+  background-image: url(../assets/contact-1.jpeg);
+  height: 604px;
+}
+
+header.blog, header.contact {
   background-repeat: no-repeat;
   background-color: #565866;
-  height: 604px;
   background-position: center;
   background-size: cover;
-  margin-bottom: 150px;
 }
-header div.wrapper {
+header.blog div.wrapper, header.contact div.wrapper {
   margin: 0 auto;
   max-width: 1775px;
 }
-header div.wrapper .headerContent {
+header.blog div.wrapper .headerContent, header.contact div.wrapper .headerContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -661,7 +654,7 @@ header div.wrapper .headerContent {
   height: 100%;
   /* Takes a height because the container is 100vh*/
 }
-header div.wrapper .headerContent h1 {
+header.blog div.wrapper .headerContent h1, header.contact div.wrapper .headerContent h1 {
   font-family: "Raleway", sans-serif;
   font-size: 46px;
   line-height: 24px;
@@ -669,7 +662,7 @@ header div.wrapper .headerContent h1 {
   font-weight: bold;
   color: #000;
 }
-header div.wrapper .headerContent nav.topBar {
+header.blog div.wrapper .headerContent nav.topBar, header.contact div.wrapper .headerContent nav.topBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,12 +670,12 @@ header div.wrapper .headerContent nav.topBar {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-header div.wrapper .headerContent .logo {
+header.blog div.wrapper .headerContent .logo, header.contact div.wrapper .headerContent .logo {
   -webkit-box-flex: 1.35;
       -ms-flex: 1.35;
           flex: 1.35;
 }
-header div.wrapper .headerContent ul.nav {
+header.blog div.wrapper .headerContent ul.nav, header.contact div.wrapper .headerContent ul.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -696,7 +689,7 @@ header div.wrapper .headerContent ul.nav {
       -ms-flex: 1;
           flex: 1;
 }
-header div.wrapper .headerContent ul.nav li {
+header.blog div.wrapper .headerContent ul.nav li, header.contact div.wrapper .headerContent ul.nav li {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -705,16 +698,16 @@ header div.wrapper .headerContent ul.nav li {
   color: #000;
   margin: 0;
 }
-header div.wrapper .headerContent ul.nav li i {
+header.blog div.wrapper .headerContent ul.nav li i, header.contact div.wrapper .headerContent ul.nav li i {
   font-size: 22px;
 }
-header div.wrapper .headerContent ul.nav li a {
+header.blog div.wrapper .headerContent ul.nav li a, header.contact div.wrapper .headerContent ul.nav li a {
   position: relative;
 }
-header div.wrapper .headerContent ul.nav li a:hover {
+header.blog div.wrapper .headerContent ul.nav li a:hover, header.contact div.wrapper .headerContent ul.nav li a:hover {
   color: #333;
 }
-header div.wrapper .headerContent ul.nav li .cart {
+header.blog div.wrapper .headerContent ul.nav li .cart, header.contact div.wrapper .headerContent ul.nav li .cart {
   position: absolute;
   background-color: #64a604;
   width: 22.5px;
@@ -738,7 +731,133 @@ header div.wrapper .headerContent ul.nav li .cart {
   font-weight: bold;
   color: #fff;
 }
-header div.wrapper .headerContent ul.nav li .active, header div.wrapper .headerContent ul.nav li .active:hover {
+header.blog div.wrapper .headerContent ul.nav li .active, header.blog div.wrapper .headerContent ul.nav li .active:hover, header.contact div.wrapper .headerContent ul.nav li .active, header.contact div.wrapper .headerContent ul.nav li .active:hover {
   color: #64a604;
   cursor: default;
+}
+
+/* CONTACT PAGE WRAPPER */
+.wrapper1 {
+  display: grid;
+  grid-template-columns: 1fr calc(min(1169px, 100%)) 1fr;
+}
+
+.wrapper1 > section {
+  grid-column: 2;
+  width: 1169px;
+  max-width: 1169px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2.25fr 1fr;
+  gap: 30px;
+}
+.wrapper1 > section h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 60px;
+}
+.wrapper1 > section h3 {
+  margin-top: 75px;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+}
+.wrapper1 > section .form {
+  padding: 90px 0;
+}
+.wrapper1 > section .form form.commentForm {
+  display: grid;
+  grid-template-columns: [col] 1fr [col] 1fr;
+  grid-template-rows: [row] auto [row] auto [row] auto [row];
+  gap: 30px;
+}
+.wrapper1 > section .form form.commentForm input[type=text], .wrapper1 > section .form form.commentForm textarea {
+  border: 1px solid #f6f6f6;
+  padding: 15px 15px;
+  grid-row: row;
+  background-color: #f6f6f6;
+  font-family: "Lora", serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: #666;
+  text-align: left;
+  font-weight: bold;
+}
+.wrapper1 > section .form form.commentForm #name {
+  grid-row: row;
+}
+.wrapper1 > section .form form.commentForm #email {
+  grid-column: col 2;
+  grid-row: row;
+}
+.wrapper1 > section .form form.commentForm #subject {
+  grid-column: col/span 2;
+  grid-row: row 2;
+}
+.wrapper1 > section .form form.commentForm textarea {
+  grid-column: col/span 2;
+  grid-row: row 3;
+  min-height: 244px;
+  resize: vertical;
+}
+.wrapper1 > section .form form.commentForm button {
+  grid-column: col;
+  grid-row: row 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  background-color: transparent;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+  color: #64a604;
+}
+.wrapper1 > section .form form.commentForm button i {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.wrapper1 > section .details {
+  background-color: #f6f6f6;
+  padding: 90px 25px;
+  grid-column: 2;
+}
+.wrapper1 > section .details .spacing {
+  margin: 25px 0;
+}
+.wrapper1 > section .details .italic {
+  font-style: italic;
+  color: #999;
+}
+.wrapper1 > section .details .days {
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 0px;
+  font-weight: normal;
+  color: #333;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1/4;
+}
+
+.right {
+  background-color: #f6f6f6;
 }
