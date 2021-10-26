@@ -217,6 +217,7 @@ h1, h2, h3, h4, p {
 }
 
 /* Colour palette */
+/* Header bg image height sizes */
 /* Footer colour palette */
 /* Blog colour palette */
 /* Text style catalog */
@@ -228,12 +229,12 @@ footer {
   background-color: #2e2e2e;
 }
 footer .content {
-  margin-top: 120px;
+  margin-top: 100px;
   margin-bottom: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: [row] auto [row];
-  gap: 32.5px 160px;
+  gap: 20px 160px;
   /* Column header */
   /* Column content */
   /* Last column which holds the form needs to be vertically centered */
@@ -243,25 +244,33 @@ footer .content .colHeader {
 }
 footer .content .colHeader h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-style: bold;
+  font-size: 34px;
+  line-height: 34px;
+  letter-spacing: 1.1px;
+  font-weight: bold;
   color: #64a604;
 }
 footer .content .colHeader .header {
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 18px;
   letter-spacing: 0.5px;
-  font-style: bold;
+  font-weight: bold;
   color: #fff;
 }
 footer .content .col {
   grid-row: row 2;
 }
 footer .content .col .row {
-  padding: 15px 0;
+  padding: 10px 0;
+}
+footer .content .col .row p {
+  font-family: "Lora", serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: #999;
+  text-align: left;
 }
 footer .content .col .row:not(:last-child) {
   border-bottom: 1px solid #474747;
@@ -289,6 +298,7 @@ footer .content .col:last-child .row p {
   letter-spacing: 0.3px;
   color: #999;
   text-align: left;
+  color: #999;
 }
 footer .content .col:last-child .row .subscribeForm {
   display: -webkit-box;
@@ -318,30 +328,27 @@ footer .content .col:last-child .row .subscribeForm #subscribeSubmit {
   color: #fff;
   font-size: 24px;
 }
-footer .title {
-  margin-bottom: 14px;
-}
-footer .title h2 {
-  font-family: "Raleway", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-style: bold;
-  color: #000;
-}
 footer .footer {
   background-color: #252525;
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-style: bold;
-  color: #999;
   padding: 30px 0;
 }
-footer .footer .wrapper span {
+footer .footer .wrapper {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+footer .footer .wrapper .copyright {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.3px;
+  font-weight: normal;
+  color: #999;
+}
+footer .footer .wrapper .copyright span {
   color: #64a604;
-  display: inline-block;
+  margin-left: 5px;
 }
 
 /*
@@ -353,14 +360,22 @@ section.blog .title {
 }
 section.blog .title h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 24px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  font-style: bold;
+  font-size: 34px;
+  line-height: 34px;
+  letter-spacing: 1.1px;
+  font-weight: bold;
   color: #000;
 }
 section.blog .details {
   margin-bottom: 38px;
+}
+section.blog .details p {
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 0.3px;
+  font-weight: normal;
+  color: #000;
 }
 section.blog .content p:not(:last-child) {
   margin-bottom: 30px;
@@ -381,7 +396,7 @@ section.tags div span.title {
   font-size: 16px;
   line-height: 36px;
   letter-spacing: 0.5px;
-  font-style: bold;
+  font-weight: bold;
   color: #333;
 }
 section.tags div span.content {
@@ -389,7 +404,7 @@ section.tags div span.content {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.3px;
-  color: #999;
+  color: #666;
   text-align: left;
 }
 section.tags div span.content i {
@@ -416,7 +431,7 @@ section.author div div .name {
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.5px;
-  font-style: bold;
+  font-weight: bold;
   color: #333;
   padding-bottom: 16px;
 }
@@ -426,7 +441,7 @@ section.relatedPosts .header, section.relatedPosts span.author, section.comments
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.5px;
-  font-style: bold;
+  font-weight: bold;
   color: #333;
 }
 
@@ -450,7 +465,7 @@ section.relatedPosts .posts .post .title {
   font-size: 18px;
   line-height: 18px;
   letter-spacing: 0.5px;
-  font-style: bold;
+  font-weight: bold;
   color: #333;
   margin-bottom: 16px;
 }
@@ -459,8 +474,8 @@ section.relatedPosts .posts .post span.link {
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 0.3px;
-  font-style: bold;
-  color: #999;
+  font-weight: bold;
+  color: #666;
 }
 
 /* Comments section */
@@ -492,7 +507,7 @@ section.comments div.comments div.comment div.published {
   font-size: 11px;
   line-height: 24px;
   letter-spacing: 0.3px;
-  font-style: bold;
+  font-weight: bold;
   color: #333;
 }
 section.comments div.comments div.comment::before {
@@ -555,7 +570,7 @@ section.leaveComment form.commentForm button {
   font-size: 16px;
   line-height: 16px;
   letter-spacing: 0.3px;
-  font-style: bold;
+  font-weight: bold;
   color: #fff;
 }
 
@@ -575,8 +590,22 @@ p {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.3px;
-  color: #999;
+  color: #666;
   text-align: left;
+}
+
+* {
+  list-style: none;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .wrapper {
@@ -604,4 +633,112 @@ p {
 
 .wrapper > section:not(:nth-child(1n+5)) {
   border-bottom: 1px solid #e5e5e5;
+}
+
+/* Header */
+header {
+  background-image: url(../assets/blog-1.jpeg);
+  background-repeat: no-repeat;
+  background-color: #565866;
+  height: 604px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 150px;
+}
+header div.wrapper {
+  margin: 0 auto;
+  max-width: 1775px;
+}
+header div.wrapper .headerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 45px;
+  height: 100%;
+  /* Takes a height because the container is 100vh*/
+}
+header div.wrapper .headerContent h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 46px;
+  line-height: 24px;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+  color: #000;
+}
+header div.wrapper .headerContent nav.topBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header div.wrapper .headerContent .logo {
+  -webkit-box-flex: 1.35;
+      -ms-flex: 1.35;
+          flex: 1.35;
+}
+header div.wrapper .headerContent ul.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+header div.wrapper .headerContent ul.nav li {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+header div.wrapper .headerContent ul.nav li i {
+  font-size: 22px;
+}
+header div.wrapper .headerContent ul.nav li a {
+  position: relative;
+}
+header div.wrapper .headerContent ul.nav li a:hover {
+  color: #333;
+}
+header div.wrapper .headerContent ul.nav li .cart {
+  position: absolute;
+  background-color: #64a604;
+  width: 22.5px;
+  height: 22.5px;
+  border-radius: 50%;
+  top: 5px;
+  left: 12.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+  color: #fff;
+}
+header div.wrapper .headerContent ul.nav li .active, header div.wrapper .headerContent ul.nav li .active:hover {
+  color: #64a604;
+  cursor: default;
 }

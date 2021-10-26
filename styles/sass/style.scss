@@ -1,6 +1,5 @@
 @import 'normalize';
 @import '_variables';
-
 @import '_footer';
 @import '_blog';
 
@@ -15,6 +14,17 @@ button {
 }
 p {
     @include lora(14px, 24px, 0.3px, $brownGrey, left);
+}
+* {
+    list-style:none;
+}
+ul, li {
+    padding:0;
+    margin:0;
+}
+a {
+    text-decoration: none;
+    color:inherit;
 }
 .wrapper {
     margin:0 auto;
@@ -35,3 +45,75 @@ p {
     border-bottom:1px solid $border;
 }
 
+/* Header */
+header {
+    background-image: url(../assets/blog-1.jpeg);
+    background-repeat: no-repeat;
+    background-color: #565866;
+    height:$headerBlog;
+    background-position: center;
+    background-size:cover;
+    margin-bottom:150px;
+    div.wrapper {
+        margin:0 auto;
+        max-width:1775px;
+        .headerContent {
+            display: flex;
+            flex-direction: column;
+            margin-top:45px;
+            height: 100%; /* Takes a height because the container is 100vh*/
+            
+            h1 {
+                @include raleWay(46px, 24px, 1.1px, $black);  
+            }
+            
+            nav.topBar {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .logo {
+                flex: 1.35;
+            }
+            
+            ul.nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex: 1;
+            }
+            
+            ul.nav li {
+                @include raleWay(16px, 16px, 1px, $black);
+                margin:0;
+                i {
+                    font-size:22px; 
+                }
+                a {
+                    position: relative; 
+                }
+                a:hover {
+                    color:$blackTwo;
+                }
+                .cart {
+                    position: absolute;
+                    background-color: $green;
+                    width:22.5px;
+                    height:22.5px;
+                    border-radius: 50%;
+                    top:5px;
+                    left:12.5px;
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include raleWay(13px, 13px, 0.3px, $white);
+                }
+                .active, .active:hover {
+                    color:$green;
+                    cursor: default; 
+                }
+            }
+        }
+    }
+    
+}

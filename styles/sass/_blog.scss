@@ -7,12 +7,15 @@ section.blog {
     .title {
         margin-bottom: 14px;
         h2 {
-            @include raleWay(24px, 24px, 0.5px, $black);
+            @include raleWay(34px, 34px, 1.1px, $black);
         }  
     } 
 
     .details {
         margin-bottom: 38px;
+        p {
+            @include raleWay(13px, 13px, 0.3px, $black, "normal");
+        }
     }
     
     .content {

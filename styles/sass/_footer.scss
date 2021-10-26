@@ -6,21 +6,21 @@ THIS PARTIAL STYLESHEET IS FOR FOOTER
 footer {
     background-color: $footer;
     .content {
-        margin-top:120px;
+        margin-top:100px;
         margin-bottom:100px;
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: [row] auto [row];
-        gap:32.5px 160px;
+        gap:20px 160px;
 
         /* Column header */
         .colHeader {
             grid-row: row;
             h2 {
-                @include raleWay(24px, 24px, 0.5px, $green);
+                @include raleWay(34px, 34px, 1.1px, $green);
             }
             .header {
-                @include raleWay(16px, 16px, 0.5px, $white);
+                @include raleWay(18px, 18px, 0.5px, $white);
             }
         }
         
@@ -28,7 +28,10 @@ footer {
         .col {
             grid-row: row 2;
             .row {
-               padding:15px 0; 
+                padding:10px 0; 
+                p {
+                    @include lora(14px, 24px, 0.3px, $lightGrey, left);
+                }
             }
             .row:not(:last-child) {
                 border-bottom:1px solid $footerBorder;
@@ -47,7 +50,8 @@ footer {
                 flex:1;
                 border-bottom:1px solid $footerBorder;
                 p {
-                    @include lora(13px, 44px, 0.3px, $brownGrey, left);
+                    @include lora(13px, 44px, 0.3px, $lightGrey, left);
+                    color:$lightGrey;
                 }
                 .subscribeForm {
                     display:flex;
@@ -55,7 +59,7 @@ footer {
                         background-color: $footerInput;
                         padding:15px;
                         font-style: italic;
-                        @include lora(14px, 24px, 0.3px, $brownGrey, left);
+                        @include lora(14px, 24px, 0.3px, $lightGrey, left);
                         border:none;
                         flex:2;
                     }
@@ -70,19 +74,21 @@ footer {
             }
         }
     }
-    .title {
-        margin-bottom: 14px;
-        h2 {
-            @include raleWay(24px, 24px, 0.5px, $black);
-        }  
-    } 
     .footer {
         background-color: $footerLast;
-        @include raleWay(18px, 24px, 0.5px, $brownGrey);
         padding:30px 0;
-        .wrapper span {
-            color: $green;
-            display:inline-block;
-        }
+        
+        .wrapper {
+            flex-direction: row;
+            .copyright {
+                @include raleWay(14px, 14px, 0.3px, $lightGrey, "normal");
+                span {
+                    color: $green;
+                    margin-left:5px;
+                }
+            }
+            
+            
+        }  
     }
 }
