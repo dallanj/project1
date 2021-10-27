@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
 
-    <title>Contact</title>
+    <title>Home</title>
 </head>
 <body>
 
     <!-- Header of page -->
-	<header class="contact">
+	<header class="home">
 
 		<!-- Wrapper to contain content -->
 		<div class="wrapper">
@@ -30,13 +30,13 @@
                         <h1>DELICIOUS</h1>
                     </div>
                     <ul class="nav">
-                        <li><a href="./index.html">HOME</a></li>
+                        <li><a class="active">HOME</a></li>
                         <li><a href="">ABOUT</a></li>
                         <li><a href="">RECIPES</a></li>
                         <li><a href="">NUTRITION</a></li>
                         <li><a href="./blog.html">BLOG</a></li>
                         <li><a href="">SHOP</a></li>
-                        <li><a class="active">CONTACT</a></li>
+                        <li><a href="./contact.html">CONTACT</a></li>
                         <li><a href=""><div class="cart"><span class="count">2</span></div><i class="fas fa-shopping-bag"></i></a></li>
                         <li><a href=""><i class="fas fa-search"></i></a></li>
                     </ul>
@@ -46,58 +46,179 @@
 	</header>
     
     
-    <main class="wrapper1">
-
-
-
-        <section>
-
-            <div class="form">
-                <h2>DROP US A LINE</h2>
-                <!-- Form for leaving comments -->
-                <form class="commentForm" action="" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" id="name">
-                    <input type="text" name="email" placeholder="Your Email" id="email">
-                    <input type="text" name="subject" placeholder="Subject" id="subject">
-                    <textarea name="message" id="specialInstructions" placeholder="Message"></textarea>
-                    <button type="submit" name="submit" id="submit">SEND MESSAGE <i class="fas fa-long-arrow-alt-right"></i></button>
-                </form>
+    <main class="container">
+      
+        <!-- recipes section within grid -->
+        <section class="full" id="#recipes">
+            <div class="grid">
+                <div class="about">
+                    <h2>
+                        MOST POPULAR RECIPES
+                    </h2>
+                    <p>
+                        Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya
+nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water
+chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek
+soko chicory celtuce parsley jícama salsify.
+                    </p>
+                    <a href="" class="green" id="viewRecipes">VIEW RECIPES</a>
+                </div>
+                <div><img src="./assets/home-2.jpeg"></div>
             </div>
-
-            <div class="details">
-                <h2>CONTACT DETAILS</h2>
-                <p>
-                    Beetroot water spinach okra water chest-
-                    nut ricebean pea catsear courgette summer
-                    purslane. Water spinach arugula pea tatsoi
-                    aubergine spring onion bush tomato kale.
-                </p>
-
-                <h3>WORKING HOURS</h3>
-                <p>
-                    <span class="days">MON - FRI</span> : 08:00am -05:30pm
-                </p>
-                <p class="italic">
-                    Not working on Saturday and Sunday!
-                </p>
-
-                <h3>CONTACT INFO</h3>
-                <p>A delicious restaurant</p>
-                <p>Toronto, Ontario</p>
-
-                <p class="spacing">yum@food.com</p>
-
-                <p>+1 234 567 8910</p>
-
-            </div>
-
-            
         </section>
 
-        <span class="right"></span>
+        <!-- menu section within grid -->
         
-        <img class="full-bleed" src="./assets/contact-2.jpeg">
-      
+        <div class="menuBG"></div>
+        <section id="#menu">
+            <div class="grid menuBG">
+                <div><img src="./assets/home-3.jpeg"></div> 
+                <div class="menu">
+                    <!-- row 1-->
+                    <div class="item">
+                        <div><i class="fas fa-lemon"></i></div>
+                        <div>
+                            <h3>VEGETARIAN</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div><i class="fas fa-utensils"></i></div>
+                        <div>
+                            <h3>APPETIZERS</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- row 2 -->
+                    <div class="item">
+                        <div><i class="fas fa-coffee"></i></div>
+                        <div>
+                            <h3>DESERTS</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div><i class="fas fa-glass-martini"></i></div>
+                        <div>
+                            <h3>DRINKS</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- row 3 -->
+                    <div class="item">
+                        <div><i class="fas fa-leaf"></i></div>
+                        <div>
+                            <h3>SALADS</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <div><i class="fas fa-utensil-spoon"></i></div>
+                        <div>
+                            <h3>SIDE DISHES</h3>
+                            <p>
+                                Veggies es bonus vobis, proinde vos postulo
+    essum magis kohlrabi welsh onion daikon
+    amaranth tatsoi tomatillo melon.azuki bean.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div class="menuBG"></div>
+        
+
+        <!-- our restaurants sections -->
+        <section id="#restaurants">
+            <div class="small">
+                <div class="restaurants">
+
+                    <div><img src="./assets/home-4.jpeg"></div>
+
+                    <h2>OUR RESTAURANTS</h2>
+
+                    <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- full bleed gallery -->
+        <section class="full" id="#gallery">
+            
+            <div class="gallery">
+
+                <div><img src="./assets/home-5.jpeg"></div>
+
+                <div><img src="./assets/home-6.jpeg"></div>
+
+                <div><img src="./assets/home-7.jpeg"></div>
+
+                <div><img src="./assets/home-8.jpeg"></div>
+
+                <div><img src="./assets/home-9.jpeg"></div>
+
+                <div><img src="./assets/home-10.jpeg"></div>
+
+
+            
+            </div>
+
+        </section>
+
+        <!-- our restaurants sections -->
+        <div class="quoteBG"></div>
+        <section id="quotes">
+            <div class="small">
+                <div class="quotes">
+
+                    <h2>HUNGRY CLIENTS</h2>
+                    
+                    <p>
+                        <i class="fas fa-quote-left"></i>
+                        Beetroot water spinach okra water chestnut ricebean pea catsear courgette summer
+    purslane. Water spinach arugula pea tatsoi aubergine spring onion bush tomato kale
+    radicchio turnip chicory salsify pea sprouts fava bean. Dandelion zucchini burdock
+    yarrow chickpea dandelion.
+                        <i class="fas fa-quote-right"></i>
+                    </p>
+                    
+                    <p class="quoteNav">
+                        <i class="fas fa-chevron-left"></i>
+                        <i class="fas fa-chevron-right"></i>
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <div class="quoteBG"></div>
+
     </main>
 
     <footer>

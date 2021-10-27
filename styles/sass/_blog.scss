@@ -49,11 +49,9 @@ section.author {
     display:grid;
     grid-template-columns: 169px 1fr;
     grid-gap: 30px;
-    div {
-        
+    div { 
         display:grid;
-        grid-template-columns: 1fr;
-        
+        grid-template-columns: 1fr;       
         div {
             .name {
                 @include raleWay(16px, 16px, 0.5px, $blackTwo);

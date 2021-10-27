@@ -221,6 +221,7 @@ h1, h2, h3, h4, p {
 /* Footer colour palette */
 /* Blog colour palette */
 /* Contact colour palette */
+/* Home page colour palette */
 /* Text style catalog */
 /*
 THIS PARTIAL STYLESHEET IS FOR FOOTER
@@ -560,182 +561,6 @@ section.leaveComment form.commentForm button {
   color: #fff;
 }
 
-/* General styling */
-img {
-  display: block;
-}
-
-button {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-p {
-  font-family: "Lora", serif;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.3px;
-  color: #666;
-  text-align: left;
-}
-
-* {
-  list-style: none;
-}
-
-ul, li {
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.wrapper {
-  margin: 0 auto;
-  max-width: 1169px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.wrapper > section {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 18px 0;
-}
-
-.wrapper > section:not(:nth-child(6)) {
-  padding: 36px 0;
-}
-
-.wrapper > section:not(:nth-child(1n+5)) {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-/* Header */
-header.blog {
-  background-image: url(../assets/blog-1.jpeg);
-  height: 604px;
-}
-
-header.contact {
-  background-image: url(../assets/contact-1.jpeg);
-  height: 604px;
-}
-
-header.blog, header.contact {
-  background-repeat: no-repeat;
-  background-color: #565866;
-  background-position: center;
-  background-size: cover;
-}
-header.blog div.wrapper, header.contact div.wrapper {
-  margin: 0 auto;
-  max-width: 1775px;
-}
-header.blog div.wrapper .headerContent, header.contact div.wrapper .headerContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 45px;
-  height: 100%;
-  /* Takes a height because the container is 100vh*/
-}
-header.blog div.wrapper .headerContent h1, header.contact div.wrapper .headerContent h1 {
-  font-family: "Raleway", sans-serif;
-  font-size: 46px;
-  line-height: 24px;
-  letter-spacing: 1.1px;
-  font-weight: bold;
-  color: #000;
-}
-header.blog div.wrapper .headerContent nav.topBar, header.contact div.wrapper .headerContent nav.topBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-header.blog div.wrapper .headerContent .logo, header.contact div.wrapper .headerContent .logo {
-  -webkit-box-flex: 1.35;
-      -ms-flex: 1.35;
-          flex: 1.35;
-}
-header.blog div.wrapper .headerContent ul.nav, header.contact div.wrapper .headerContent ul.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-header.blog div.wrapper .headerContent ul.nav li, header.contact div.wrapper .headerContent ul.nav li {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  color: #000;
-  margin: 0;
-}
-header.blog div.wrapper .headerContent ul.nav li i, header.contact div.wrapper .headerContent ul.nav li i {
-  font-size: 22px;
-}
-header.blog div.wrapper .headerContent ul.nav li a, header.contact div.wrapper .headerContent ul.nav li a {
-  position: relative;
-}
-header.blog div.wrapper .headerContent ul.nav li a:hover, header.contact div.wrapper .headerContent ul.nav li a:hover {
-  color: #333;
-}
-header.blog div.wrapper .headerContent ul.nav li .cart, header.contact div.wrapper .headerContent ul.nav li .cart {
-  position: absolute;
-  background-color: #64a604;
-  width: 22.5px;
-  height: 22.5px;
-  border-radius: 50%;
-  top: 5px;
-  left: 12.5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: "Raleway", sans-serif;
-  font-size: 13px;
-  line-height: 13px;
-  letter-spacing: 0.3px;
-  font-weight: bold;
-  color: #fff;
-}
-header.blog div.wrapper .headerContent ul.nav li .active, header.blog div.wrapper .headerContent ul.nav li .active:hover, header.contact div.wrapper .headerContent ul.nav li .active, header.contact div.wrapper .headerContent ul.nav li .active:hover {
-  color: #64a604;
-  cursor: default;
-}
-
 /* CONTACT PAGE WRAPPER */
 .wrapper1 {
   display: grid;
@@ -744,7 +569,6 @@ header.blog div.wrapper .headerContent ul.nav li .active, header.blog div.wrappe
 
 .wrapper1 > section {
   grid-column: 2;
-  width: 1169px;
   max-width: 1169px;
   margin: 0 auto;
   display: grid;
@@ -860,4 +684,422 @@ header.blog div.wrapper .headerContent ul.nav li .active, header.blog div.wrappe
 
 .right {
   background-color: #f6f6f6;
+}
+
+/* 
+main container 1170px small
+full-bleed 100%;      full
+1920px container      large
+
+*/
+/* Container for home page */
+.container {
+  display: grid;
+  grid-template-columns: 1fr calc(min(1920px, 100%)) 1fr;
+}
+.container .full {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  grid-column: 1/4;
+}
+.container .small {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.container section {
+  grid-column: 2;
+}
+.container .menuBG {
+  background: #f2f2f2;
+}
+.container p {
+  font-family: "Lora", serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.container h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 34px;
+  line-height: 34px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  margin-bottom: 60px;
+}
+.container h2::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 4px;
+  bottom: -25px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #64a604;
+}
+
+/* Home page styling */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+.grid .menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 50px;
+  justify-self: center;
+  width: 75%;
+  align-self: center;
+}
+.grid .menu .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.grid .menu .item p {
+  font-family: "Lora", serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: #666;
+  text-align: left;
+}
+.grid .menu .item i {
+  color: #333;
+  margin-right: 0.85em;
+  max-width: 1em;
+}
+.grid .menu .item h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.quoteBG, section#quotes {
+  background-color: #dded9a;
+}
+
+.quotes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin: 15em auto 10em auto;
+}
+.quotes p {
+  font-family: "Lora", serif;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.6px;
+  color: #333;
+  text-align: center;
+  font-style: italic;
+  position: relative;
+}
+.quotes p.quoteNav {
+  margin-top: 2.5em;
+  color: #fff;
+  cursor: pointer;
+}
+.quotes p.quoteNav i:first-child {
+  margin-right: 1em;
+  color: #eef6d1;
+}
+.quotes .fa-quote-right, .quotes .fa-quote-left {
+  position: absolute;
+  color: #fff;
+  font-size: 2em;
+}
+.quotes .fa-quote-left {
+  top: -15px;
+  left: -100px;
+}
+.quotes .fa-quote-right {
+  bottom: 10px;
+  right: -100px;
+}
+
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  margin: 15em auto 10em auto;
+}
+
+.restaurants > div {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.restaurants > div::after {
+  content: "";
+  position: absolute;
+  top: -38%;
+  left: 75%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/home-circle-text.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+/* General styling */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+p {
+  font-family: "Lora", serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: #666;
+  text-align: left;
+}
+
+* {
+  list-style: none;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.green {
+  padding: 25px 0;
+  width: 33%;
+  margin: 0 auto;
+  background-color: #64a604;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1169px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper > section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 18px 0;
+}
+
+.wrapper > section:not(:nth-child(6)) {
+  padding: 36px 0;
+}
+
+.wrapper > section:not(:nth-child(1n+5)) {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Header */
+header.blog {
+  background-image: url(../assets/blog-1.jpeg);
+  height: 604px;
+}
+
+header.contact {
+  background-image: url(../assets/contact-1.jpeg);
+  height: 604px;
+}
+
+header.home {
+  background-image: url(../assets/home-1.jpeg);
+  height: 976px;
+}
+
+header.blog, header.contact, header.home {
+  background-repeat: no-repeat;
+  background-color: #565866;
+  background-position: center;
+  background-size: cover;
+}
+header.blog div.wrapper, header.contact div.wrapper, header.home div.wrapper {
+  margin: 0 auto;
+  max-width: 1775px;
+}
+header.blog div.wrapper .headerContent, header.contact div.wrapper .headerContent, header.home div.wrapper .headerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 45px;
+  height: 100%;
+  /* Takes a height because the container is 100vh*/
+}
+header.blog div.wrapper .headerContent h1, header.contact div.wrapper .headerContent h1, header.home div.wrapper .headerContent h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 46px;
+  line-height: 24px;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+  color: #000;
+}
+header.blog div.wrapper .headerContent nav.topBar, header.contact div.wrapper .headerContent nav.topBar, header.home div.wrapper .headerContent nav.topBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header.blog div.wrapper .headerContent .logo, header.contact div.wrapper .headerContent .logo, header.home div.wrapper .headerContent .logo {
+  -webkit-box-flex: 1.35;
+      -ms-flex: 1.35;
+          flex: 1.35;
+}
+header.blog div.wrapper .headerContent ul.nav, header.contact div.wrapper .headerContent ul.nav, header.home div.wrapper .headerContent ul.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+header.blog div.wrapper .headerContent ul.nav li, header.contact div.wrapper .headerContent ul.nav li, header.home div.wrapper .headerContent ul.nav li {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+header.blog div.wrapper .headerContent ul.nav li i, header.contact div.wrapper .headerContent ul.nav li i, header.home div.wrapper .headerContent ul.nav li i {
+  font-size: 22px;
+}
+header.blog div.wrapper .headerContent ul.nav li a, header.contact div.wrapper .headerContent ul.nav li a, header.home div.wrapper .headerContent ul.nav li a {
+  position: relative;
+}
+header.blog div.wrapper .headerContent ul.nav li a:hover, header.contact div.wrapper .headerContent ul.nav li a:hover, header.home div.wrapper .headerContent ul.nav li a:hover {
+  color: #333;
+}
+header.blog div.wrapper .headerContent ul.nav li .cart, header.contact div.wrapper .headerContent ul.nav li .cart, header.home div.wrapper .headerContent ul.nav li .cart {
+  position: absolute;
+  background-color: #64a604;
+  width: 22.5px;
+  height: 22.5px;
+  border-radius: 50%;
+  top: 5px;
+  left: 12.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+  color: #fff;
+}
+header.blog div.wrapper .headerContent ul.nav li .active, header.blog div.wrapper .headerContent ul.nav li .active:hover, header.contact div.wrapper .headerContent ul.nav li .active, header.contact div.wrapper .headerContent ul.nav li .active:hover, header.home div.wrapper .headerContent ul.nav li .active, header.home div.wrapper .headerContent ul.nav li .active:hover {
+  color: #64a604;
+  cursor: default;
 }
