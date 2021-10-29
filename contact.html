@@ -19,26 +19,42 @@
 <body>
 
     <!-- Header of page -->
-	<header class="contact">
+	<header class="home">
 
 		<!-- Wrapper to contain content -->
-		<div class="wrapper">
+		<div class="wrapper headerPadding">
             <div class="headerContent">
                 <!-- Navigation of site -->
                 <nav class="topBar">
                     <div class="logo">
-                        <h1>DELICIOUS</h1>
+                        <h1><a href="./index.html">DELICIOUS</a></h1>
                     </div>
-                    <ul class="nav">
-                        <li><a href="./index.html">HOME</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">RECIPES</a></li>
-                        <li><a href="">NUTRITION</a></li>
-                        <li><a href="./blog.html">BLOG</a></li>
-                        <li><a href="">SHOP</a></li>
-                        <li><a class="active">CONTACT</a></li>
-                        <li><a href=""><div class="cart"><span class="count">2</span></div><i class="fas fa-shopping-bag"></i></a></li>
-                        <li><a href=""><i class="fas fa-search"></i></a></li>
+                    <ul class="nav clearfix">
+                        <li class="desktop"><a href="./index.html">HOME</a></li>
+                        <li class="desktop"><a href="">ABOUT</a></li>
+                        <li class="desktop"><a href="">RECIPES</a></li>
+                        <li class="desktop"><a href="">NUTRITION</a></li>
+                        <li class="desktop"><a href="./blog.html">BLOG</a></li>
+                        <li class="desktop"><a href="">SHOP</a></li>
+                        <li class="desktop"><a class="active">CONTACT</a></li>
+                        <li class="desktop"><a href=""><div class="cart"><span class="count">2</span></div><i class="fas fa-shopping-bag"></i></a></li>
+                        <li class="desktop"><a href=""><i class="fas fa-search"></i></a></li>
+
+                        <li class="mobile"><i class="fas fa-bars"></i>
+                            <ul class="sub-menu">
+                                <li><a href="./index.html">HOME</a></li>
+                                <li><a href="">ABOUT</a></li>
+                                <li><a href="">RECIPES</a></li>
+                                <li><a href="">NUTRITION</a></li>
+                                <li><a href="./blog.html">BLOG</a></li>
+                                <li><a href="">SHOP</a></li>
+                                <li><a class="active">CONTACT</a></li>
+                                <li><a href="">CART <div class="cartMobile"><span class="count">2</span></div></a></li>
+                                <li><a href="">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        
+                        
                     </ul>
                 </nav>
             </div>
@@ -46,7 +62,7 @@
 	</header>
     
     
-    <main class="wrapper1">
+    <main class="wrapperContact">
 
 
 
@@ -93,7 +109,6 @@
 
             
         </section>
-
         <span class="right"></span>
         
         <img class="full-bleed" src="./assets/contact-2.jpeg">
@@ -188,9 +203,9 @@
                     <div class="row">
                         <p>
                             <span class="socialLinks">
-                                <i class="fab fa-facebook-f"></i>
-                                <i class="fab fa-twitter"></i>
-                                <i class="fab fa-instagram"></i>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
                             </span>
                         </p>
                     </div>

@@ -1,14 +1,14 @@
 /* CONTACT PAGE WRAPPER */
-.wrapper1 {
+.wrapperContact {
     display: grid;
     grid-template-columns:
       1fr
-      calc(min(1169px, 100%))
+      calc(min(1170px, 100%))
       1fr;
   }
-  .wrapper1 > section {
+  .wrapperContact > section {
     grid-column: 2;
-    max-width:1169px;
+    max-width:1170px;
     margin: 0 auto;
 
     display:grid;
@@ -97,6 +97,8 @@
         }
         
     }
+
+    
 
   }
   .full-bleed {
