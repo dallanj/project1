@@ -1485,6 +1485,22 @@ ul.nav li:hover .sub-menu, ul.nav li:focus-within {
     margin-bottom: 5px;
   }
 }
+@media (max-width: 640px) {
+  .container {
+    overflow-x: hidden;
+    overflow-y: visible;
+    position: relative;
+  }
+
+  .gallery div:hover {
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    position: absolute;
+    max-width: 100vw;
+  }
+}
 /* Landscape phones and down */
 @media (max-width: 480px) {
   .wrapper {
@@ -1537,11 +1553,6 @@ ul.nav li:hover .sub-menu, ul.nav li:focus-within {
     right: -50px;
   }
 
-  .container {
-    overflow-x: hidden;
-    overflow-y: visible;
-    position: relative;
-  }
   .container .restaurants > div::after {
     content: "";
     position: absolute;
@@ -1564,14 +1575,5 @@ ul.nav li:hover .sub-menu, ul.nav li:focus-within {
   }
   .quotes p {
     font-size: 125%;
-  }
-
-  .gallery div:hover {
-    -webkit-transition: 300ms;
-    transition: 300ms;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    position: absolute;
-    max-width: 100vw;
   }
 }
