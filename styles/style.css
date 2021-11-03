@@ -987,7 +987,7 @@ label::before {
   color: #64a604;
   text-align: left;
 }
-.popup span {
+.popup #closePopup {
   position: absolute;
   right: -25px;
   top: -25px;
@@ -999,7 +999,7 @@ label::before {
   text-align: left;
   cursor: pointer;
 }
-.popup span:hover {
+.popup #closePopup:hover {
   color: #000;
 }
 

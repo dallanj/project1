@@ -64,14 +64,14 @@ label::before {
     z-index: 200;
     box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
     @include lora(16px, 24px, 0.3px, $green, left);
-    span {
+    #closePopup {
         position: absolute;
         right:-25px;
         top:-25px;
         @include lora(24px, 24px, 0.3px, $blackTwo, left);
         cursor: pointer;
     }
-    span:hover {
+    #closePopup:hover {
         color: $black;
     }
 }
