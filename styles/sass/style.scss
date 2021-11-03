@@ -13,6 +13,95 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, a:hover,
 * {
     transition: 300ms;
 }
+// label {
+//     background:red;
+//     width:80%;
+// }
+
+/* Error */
+label { 
+    background-color: #cc3d3c;
+    color: #fff;
+    position: relative;
+    padding: .5em; 
+    width:80%;
+    @include lora(14px, 24px, 0.3px, $white, left);
+    animation-name: fadeIn;
+    animation-duration: 2s, 2s;
+    animation-fill-mode: forwards;
+    opacity:0;
+}
+label::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: -8px;
+    border-right: 8px solid transparent;
+    border-bottom:8px solid #cc3d3c;
+    border-left: 8px solid transparent;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+    transition: 0;
+    z-index: 100;
+//     filter: blur(8px);
+//   -webkit-filter: blur(8px);
+}
+.popup {
+    position: fixed;
+    background:$white;
+    padding:5em;
+    left:50%;
+    animation: slideInFromTop .3s linear 0s 1 normal forwards;
+    z-index: 200;
+    box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+    @include lora(16px, 24px, 0.3px, $green, left);
+    span {
+        position: absolute;
+        right:-25px;
+        top:-25px;
+        @include lora(24px, 24px, 0.3px, $blackTwo, left);
+        cursor: pointer;
+    }
+    span:hover {
+        color: $black;
+    }
+}
+
+/* animations for error and popups*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slideInFromTop {
+    0% {
+      -ms-transform: translate(-50%, -100%);
+        -moz-transform: translate(-50%, -100%);
+        -webkit-transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
+    }
+    100% {
+         -ms-transform: translate(-50%, 100%);
+        -moz-transform: translate(-50%, 100%);
+        -webkit-transform: translate(-50%, 100%);
+        transform: translate(-50%, 100%);
+        opacity: 1;
+    }
+  }
+
+
 img {
     display: block;
     max-width: 100%;

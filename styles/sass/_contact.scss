@@ -38,28 +38,32 @@
             input[type="text"], textarea {
                 border:1px solid $contactGrey;
                 padding: 15px 15px;
-                grid-row: row;
                 background-color: $contactGrey;
                 @include lora(14px, 24px, 0.3px, $brownGrey, left);
                 font-weight: bold;
+                width:100%;
             }
-            #name {
+
+            div:nth-child(1) {
                 grid-row: row;
             }
-            #email {
+            div:nth-child(2) {
                 grid-column: col 2;
                 grid-row: row;
             }
-            #subject {
+            div:nth-child(3) {
                 grid-column: col / span 2;
                 grid-row: row 2;
             }
-            textarea {
+            div:nth-child(4) {
                 grid-column: col / span 2;
                 grid-row: row 3;
-                min-height:244px;
-                resize: vertical;
+                textarea {
+                    min-height:244px;
+                    resize: vertical;
+                }
             }
+            
             button {
                 grid-column: col;
                 grid-row: row 4;

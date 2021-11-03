@@ -18,6 +18,17 @@
 </head>
 <body>
 
+    <!-- popup box -->
+    <div id="popup" class="overlay">
+        <div class="popup">
+            <span id="closePopup">
+                <i class="far fa-times-circle"></i>
+            </span>
+            Success! Message has been sent <i class="far fa-check-circle"></i>
+        </div>
+        
+    </div>
+
     <!-- Header of page -->
 	<header class="home">
 
@@ -72,10 +83,23 @@
                 <h2>DROP US A LINE</h2>
                 <!-- Form for leaving comments -->
                 <form class="commentForm" action="" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" id="name">
-                    <input type="text" name="email" placeholder="Your Email" id="email">
-                    <input type="text" name="subject" placeholder="Subject" id="subject">
-                    <textarea name="message" id="specialInstructions" placeholder="Message"></textarea>
+                    
+                    <div id="name">
+                        <input type="text" name="name" placeholder="Your Name" id="inputName">
+                    </div>
+
+                    <div id="email">
+                        <input type="text" name="email" placeholder="Your Email" id="inputEmail">
+                    </div>
+
+                    <div id="subject">
+                        <input type="text" name="subject" placeholder="Subject" id="inputSubject">
+                    </div>
+                    
+                    <div id="message">
+                        <textarea name="message" id="inputMessage" placeholder="Message"></textarea>
+                    </div>
+                    
                     <button type="submit" name="submit" id="submit">SEND MESSAGE <i class="fas fa-long-arrow-alt-right"></i></button>
                 </form>
             </div>
@@ -221,6 +245,113 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        
+
+        function setError(firstId, secondId, message) {
+            // remove existing error
+            const div = document.getElementById(firstId);
+            if(div.children.length > 1) {
+                div.removeChild(div.lastChild);
+            }
+            // change background to red
+            secondId.style.background = '#fbe7f0'
+
+            // create label
+            const node = document.createElement("label");
+
+            // create message for label
+            const textnode = document.createTextNode(message);
+
+            // create and set attribute
+            const att = document.createAttribute("for");       // Create a "class" attribute
+            att.value = secondId; 
+            node.setAttributeNode(att);
+
+            // append message to label and append label to parent
+            node.appendChild(textnode); 
+            document.getElementById(firstId).appendChild(node); 
+        }
+
+
+        function unsetError(firstId, secondId) {
+            const div = document.getElementById(firstId);
+
+            /*
+                if div has more than 1 child
+                child[0] is the input
+                anything greater needs to be removed
+                and background of the input needs to changed back to non error state
+
+            */
+            if(div.children.length > 1) {
+                div.removeChild(div.lastChild);
+            }
+            secondId.style.background = '#f6f6f6';
+        }
+
+
+        function emailValidation(email) {
+            /*
+                Using regex I can validate an email by allowing only numbers, letters
+                And following a specific pattern ____@___.__
+
+            */
+            const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            return regex.test(email);
+        }
+
+        const formElement = document.querySelector('form');
+
+        formElement.addEventListener('submit', function(event) {
+            const name = document.querySelector('#name');
+            const email = document.querySelector('#email');
+            const subject = document.querySelector('#subject');
+            const message = document.querySelector('#message');
+            
+            const inputName = document.querySelector('#inputName');
+            const inputEmail = document.querySelector('#inputEmail');
+            const inputSubject = document.querySelector('#inputSubject');
+            const inputMessage = document.querySelector('#inputMessage');
+
+            event.preventDefault();
+
+            if(!inputName.value.trim()) {
+                setError('name', inputName, 'You must enter your name')       
+            } else {
+                unsetError('name', inputName);
+            }
+            if(!inputEmail.value.trim()) {
+                setError('email', inputEmail, 'You must enter your email')       
+            } else {
+                unsetError('email', inputEmail);
+            }
+            if(!emailValidation(inputEmail.value) && inputEmail.value.trim()) {
+                setError('email', inputEmail, 'Enter a valid email address') 
+            }
+            if(!inputSubject.value.trim()) {
+                setError('subject', inputSubject, 'You must enter a subject')       
+            } else {
+                unsetError('subject', inputSubject);
+            }
+            if(!inputMessage.value.trim()) {
+                setError('message', inputMessage, 'You must enter a message');
+            } else {
+                unsetError('message', inputMessage);
+            }
+            if(inputName.value.trim() && inputEmail.value.trim() && emailValidation(inputEmail.value) && inputSubject.value.trim() && inputMessage.value.trim()) {
+                const popup = document.getElementById("popup");
+                popup.style.display = "block";
+            }
+        });
+
+        const closePopup = document.querySelector('#closePopup');
+
+        closePopup.addEventListener('click', function(event) {
+            popup.style.display = "none";
+        });
+    </script>
 
 </body>
 </html>

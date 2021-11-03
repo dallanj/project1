@@ -606,7 +606,6 @@ section.leaveComment form.commentForm button {
 .wrapperContact > section .form form.commentForm input[type=text], .wrapperContact > section .form form.commentForm textarea {
   border: 1px solid #f6f6f6;
   padding: 15px 15px;
-  grid-row: row;
   background-color: #f6f6f6;
   font-family: "Lora", serif;
   font-size: 14px;
@@ -615,21 +614,24 @@ section.leaveComment form.commentForm button {
   color: #666;
   text-align: left;
   font-weight: bold;
+  width: 100%;
 }
-.wrapperContact > section .form form.commentForm #name {
+.wrapperContact > section .form form.commentForm div:nth-child(1) {
   grid-row: row;
 }
-.wrapperContact > section .form form.commentForm #email {
+.wrapperContact > section .form form.commentForm div:nth-child(2) {
   grid-column: col 2;
   grid-row: row;
 }
-.wrapperContact > section .form form.commentForm #subject {
+.wrapperContact > section .form form.commentForm div:nth-child(3) {
   grid-column: col/span 2;
   grid-row: row 2;
 }
-.wrapperContact > section .form form.commentForm textarea {
+.wrapperContact > section .form form.commentForm div:nth-child(4) {
   grid-column: col/span 2;
   grid-row: row 3;
+}
+.wrapperContact > section .form form.commentForm div:nth-child(4) textarea {
   min-height: 244px;
   resize: vertical;
 }
@@ -921,6 +923,125 @@ input:hover, input:focus, textarea:hover, textarea:focus, button:hover, a:hover,
   transition: 300ms;
 }
 
+/* Error */
+label {
+  background-color: #cc3d3c;
+  color: #fff;
+  position: relative;
+  padding: 0.5em;
+  width: 80%;
+  font-family: "Lora", serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: #fff;
+  text-align: left;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 2s, 2s;
+          animation-duration: 2s, 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+label::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: -8px;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #cc3d3c;
+  border-left: 8px solid transparent;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0;
+  transition: 0;
+  z-index: 100;
+}
+
+.popup {
+  position: fixed;
+  background: #fff;
+  padding: 5em;
+  left: 50%;
+  -webkit-animation: slideInFromTop 0.3s linear 0s 1 normal forwards;
+          animation: slideInFromTop 0.3s linear 0s 1 normal forwards;
+  z-index: 200;
+  -webkit-box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+          box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  font-family: "Lora", serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: #64a604;
+  text-align: left;
+}
+.popup span {
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  font-family: "Lora", serif;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: #333;
+  text-align: left;
+  cursor: pointer;
+}
+.popup span:hover {
+  color: #000;
+}
+
+/* animations for error and popups*/
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 100%);
+    transform: translate(-50%, 100%);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    -webkit-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 100%);
+    transform: translate(-50%, 100%);
+    opacity: 1;
+  }
+}
 img {
   display: block;
   max-width: 100%;
