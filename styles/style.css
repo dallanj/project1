@@ -528,20 +528,21 @@ section.leaveComment form.commentForm input[type=text], section.leaveComment for
   border: 1px solid #e5e5e5;
   padding: 20px 15px;
   grid-row: row;
+  width: 100%;
 }
-section.leaveComment form.commentForm #name {
+section.leaveComment form.commentForm #name, section.leaveComment form.commentForm #commentName {
   grid-column: col;
   grid-row: row;
 }
-section.leaveComment form.commentForm #email {
+section.leaveComment form.commentForm #email, section.leaveComment form.commentForm #commentEmail {
   grid-column: col 2;
   grid-row: row;
 }
-section.leaveComment form.commentForm #website {
+section.leaveComment form.commentForm #website, section.leaveComment form.commentForm #commentWebsite {
   grid-column: col 3;
   grid-row: row;
 }
-section.leaveComment form.commentForm textarea {
+section.leaveComment form.commentForm textarea, section.leaveComment form.commentForm #comment {
   grid-column: col/span 3;
   grid-row: row 2;
   min-height: 180px;
@@ -987,7 +988,7 @@ label::before {
   color: #64a604;
   text-align: left;
 }
-.popup #closePopup {
+.popup .closePopup {
   position: absolute;
   right: -25px;
   top: -25px;
@@ -999,8 +1000,55 @@ label::before {
   text-align: left;
   cursor: pointer;
 }
-.popup #closePopup:hover {
+.popup .closePopup:hover {
   color: #000;
+}
+
+#mobileMenu {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0;
+  transition: 0;
+  z-index: 100;
+  display: none;
+}
+#mobileMenu ul {
+  position: fixed;
+  padding: 5em;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  opacity: 0;
+  -webkit-animation: slideInFromBottom 0.3s linear 0s 1 normal forwards;
+          animation: slideInFromBottom 0.3s linear 0s 1 normal forwards;
+  z-index: 200;
+}
+#mobileMenu ul li {
+  margin: 1em;
+}
+#mobileMenu ul .closeMobileMenu {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+#mobileMenu ul li {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+  color: #333;
 }
 
 /* animations for error and popups*/
@@ -1020,25 +1068,47 @@ label::before {
     opacity: 1;
   }
 }
+@-webkit-keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
 @-webkit-keyframes slideInFromTop {
   0% {
     -webkit-transform: translate(-50%, -100%);
-    transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%);
   }
   100% {
     -webkit-transform: translate(-50%, 100%);
-    transform: translate(-50%, 100%);
+            transform: translate(-50%, 100%);
     opacity: 1;
   }
 }
 @keyframes slideInFromTop {
   0% {
     -webkit-transform: translate(-50%, -100%);
-    transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%);
   }
   100% {
     -webkit-transform: translate(-50%, 100%);
-    transform: translate(-50%, 100%);
+            transform: translate(-50%, 100%);
     opacity: 1;
   }
 }
@@ -1411,18 +1481,18 @@ ul.nav li:hover .sub-menu, ul.nav li:focus-within {
     grid-template-columns: [col] 1fr [col] 1fr;
     grid-template-rows: [row] auto [row] auto [row] auto [row];
   }
-  section.leaveComment form.commentForm #name {
+  section.leaveComment form.commentForm #name, section.leaveComment form.commentForm #commentName {
     grid-row: row;
   }
-  section.leaveComment form.commentForm #email {
+  section.leaveComment form.commentForm #email, section.leaveComment form.commentForm #commentEmail {
     grid-column: col 2;
     grid-row: row 1;
   }
-  section.leaveComment form.commentForm #website {
+  section.leaveComment form.commentForm #website, section.leaveComment form.commentForm #commentWebsite {
     grid-column: col/span 2;
     grid-row: row 2;
   }
-  section.leaveComment form.commentForm textarea {
+  section.leaveComment form.commentForm textarea, section.leaveComment form.commentForm #comment {
     grid-column: col/span 2;
     grid-row: row 3;
   }
@@ -1504,18 +1574,18 @@ ul.nav li:hover .sub-menu, ul.nav li:focus-within {
     grid-template-columns: [col] 1fr;
     grid-template-rows: [row] auto [row] auto [row] auto [row] auto [row];
   }
-  .wrapperContact > section .form form.commentForm #name {
+  .wrapperContact > section .form form.commentForm #name, .wrapperContact > section .form form.commentForm #commentName {
     grid-row: row;
   }
-  .wrapperContact > section .form form.commentForm #email {
+  .wrapperContact > section .form form.commentForm #email, .wrapperContact > section .form form.commentForm #commentEmail {
     grid-column: col;
     grid-row: row 2;
   }
-  .wrapperContact > section .form form.commentForm #subject {
+  .wrapperContact > section .form form.commentForm #subject, .wrapperContact > section .form form.commentForm #commentWebsite {
     grid-column: col;
     grid-row: row 3;
   }
-  .wrapperContact > section .form form.commentForm textarea {
+  .wrapperContact > section .form form.commentForm textarea, .wrapperContact > section .form form.commentForm #comment {
     grid-column: col;
     grid-row: row 4;
   }
@@ -1534,18 +1604,18 @@ ul.nav li:hover .sub-menu, ul.nav li:focus-within {
     grid-template-columns: [col] 1fr;
     grid-template-rows: [row] auto [row] auto [row] auto [row] auto [row];
   }
-  .wrapper section.leaveComment form.commentForm #name {
+  .wrapper section.leaveComment form.commentForm #name, .wrapper section.leaveComment form.commentForm #commentName {
     grid-row: row;
   }
-  .wrapper section.leaveComment form.commentForm #email {
+  .wrapper section.leaveComment form.commentForm #email, .wrapper section.leaveComment form.commentForm #commentEmail {
     grid-column: col;
     grid-row: row 2;
   }
-  .wrapper section.leaveComment form.commentForm #website {
+  .wrapper section.leaveComment form.commentForm #website, .wrapper section.leaveComment form.commentForm #commentWebsite {
     grid-column: col;
     grid-row: row 3;
   }
-  .wrapper section.leaveComment form.commentForm textarea {
+  .wrapper section.leaveComment form.commentForm textarea, .wrapper section.leaveComment form.commentForm #comment {
     grid-column: col;
     grid-row: row 4;
   }
@@ -1631,18 +1701,18 @@ ul.nav li:hover .sub-menu, ul.nav li:focus-within {
     grid-template-columns: [col] 1fr;
     grid-template-rows: [row] auto [row] auto [row] auto [row] auto [row];
   }
-  .wrapper section.leaveComment form.commentForm #name {
+  .wrapper section.leaveComment form.commentForm #name, .wrapper section.leaveComment form.commentForm #commentName {
     grid-row: row;
   }
-  .wrapper section.leaveComment form.commentForm #email {
+  .wrapper section.leaveComment form.commentForm #email, .wrapper section.leaveComment form.commentForm #commentEmail {
     grid-column: col;
     grid-row: row 2;
   }
-  .wrapper section.leaveComment form.commentForm #website {
+  .wrapper section.leaveComment form.commentForm #website, .wrapper section.leaveComment form.commentForm #commentWebsite {
     grid-column: col;
     grid-row: row 3;
   }
-  .wrapper section.leaveComment form.commentForm textarea {
+  .wrapper section.leaveComment form.commentForm textarea, .wrapper section.leaveComment form.commentForm #comment {
     grid-column: col;
     grid-row: row 4;
   }

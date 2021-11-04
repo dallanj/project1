@@ -64,15 +64,50 @@ label::before {
     z-index: 200;
     box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
     @include lora(16px, 24px, 0.3px, $green, left);
-    #closePopup {
+    .closePopup {
         position: absolute;
         right:-25px;
         top:-25px;
         @include lora(24px, 24px, 0.3px, $blackTwo, left);
         cursor: pointer;
     }
-    #closePopup:hover {
+    .closePopup:hover {
         color: $black;
+    }
+}
+
+#mobileMenu {
+    position: fixed;
+    background: rgba(255,255,255,.9);
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+    transition: 0;
+    z-index: 100;
+    display:none;
+    ul {
+        position: fixed;
+        padding:5em;
+        width:100vw;
+        height:100vh;
+        text-align: center;
+        opacity: 0;
+        li {
+            margin:1em;
+        }
+        animation: slideInFromBottom .3s linear 0s 1 normal forwards;
+        z-index: 200;
+        .closeMobileMenu {
+            position:absolute;
+            right:25px;
+            top:25px;
+            @include raleWay(24px, 24px, 0.3px, $blackTwo);
+            cursor: pointer;
+        }
+        li {
+            @include raleWay(24px, 24px, 0.3px, $blackTwo);
+        }
     }
 }
 
@@ -85,21 +120,24 @@ label::before {
         opacity: 1;
     }
 }
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
 @keyframes slideInFromTop {
     0% {
-      -ms-transform: translate(-50%, -100%);
-        -moz-transform: translate(-50%, -100%);
-        -webkit-transform: translate(-50%, -100%);
         transform: translate(-50%, -100%);
     }
     100% {
-         -ms-transform: translate(-50%, 100%);
-        -moz-transform: translate(-50%, 100%);
-        -webkit-transform: translate(-50%, 100%);
         transform: translate(-50%, 100%);
         opacity: 1;
     }
-  }
+}
 
 
 img {
@@ -395,18 +433,18 @@ ul.nav li:hover .sub-menu, ul.nav li:focus-within {
         form.commentForm {
             grid-template-columns: [col] 1fr [col] 1fr;
             grid-template-rows: [row] auto [row] auto [row] auto [row];
-            #name {
+            #name, #commentName {
                 grid-row: row;
             }
-            #email {
+            #email, #commentEmail {
                 grid-column: col 2;
                 grid-row: row 1;
             }
-            #website {
+            #website, #commentWebsite {
                 grid-column: col / span 2;
                 grid-row: row 2;
             }
-            textarea {
+            textarea, #comment {
                 grid-column: col / span 2;
                 grid-row: row 3;
             }
@@ -493,18 +531,18 @@ ul.nav li:hover .sub-menu, ul.nav li:focus-within {
             form.commentForm {
                 grid-template-columns: [col] 1fr;
                 grid-template-rows: [row] auto [row] auto [row] auto [row] auto [row];
-                #name {
+                #name, #commentName {
                     grid-row: row;
                 }
-                #email {
+                #email, #commentEmail {
                     grid-column: col;
                     grid-row: row 2;
                 }
-                #subject {
+                #subject, #commentWebsite {
                     grid-column: col;
                     grid-row: row 3;
                 }
-                textarea {
+                textarea, #comment {
                     grid-column: col;
                     grid-row: row 4;
                 }
@@ -532,18 +570,18 @@ ul.nav li:hover .sub-menu, ul.nav li:focus-within {
             form.commentForm {
                 grid-template-columns: [col] 1fr;
                 grid-template-rows: [row] auto [row] auto [row] auto [row] auto [row];
-                #name {
+                #name, #commentName {
                     grid-row: row;
                 }
-                #email {
+                #email, #commentEmail {
                     grid-column: col;
                     grid-row: row 2;
                 }
-                #website {
+                #website, #commentWebsite {
                     grid-column: col;
                     grid-row: row 3;
                 }
-                textarea {
+                textarea, #comment {
                     grid-column: col;
                     grid-row: row 4;
                 }
@@ -648,18 +686,18 @@ ul.nav li:hover .sub-menu, ul.nav li:focus-within {
             form.commentForm {
                 grid-template-columns: [col] 1fr;
                 grid-template-rows: [row] auto [row] auto [row] auto [row] auto [row];
-                #name {
+                #name, #commentName {
                     grid-row: row;
                 }
-                #email {
+                #email, #commentEmail {
                     grid-column: col;
                     grid-row: row 2;
                 }
-                #website {
+                #website, #commentWebsite {
                     grid-column: col;
                     grid-row: row 3;
                 }
-                textarea {
+                textarea, #comment {
                     grid-column: col;
                     grid-row: row 4;
                 }

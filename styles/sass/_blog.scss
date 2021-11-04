@@ -149,20 +149,21 @@ section.leaveComment {
             border:1px solid $border;
             padding: 20px 15px;
             grid-row: row;
+            width:100%;
         }
-        #name {
+        #name, #commentName {
             grid-column: col;
             grid-row: row;
         }
-        #email {
+        #email, #commentEmail {
             grid-column: col 2;
             grid-row: row;
         }
-        #website {
+        #website, #commentWebsite {
             grid-column: col 3;
             grid-row: row;
         }
-        textarea {
+        textarea, #comment {
             grid-column: col / span 3;
             grid-row: row 2;
             min-height:180px;

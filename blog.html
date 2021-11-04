@@ -18,6 +18,16 @@
 </head>
 <body>
 
+    <!-- popup box -->
+    <div id="popup" class="overlay">
+        <div class="popup">
+            <span class="closePopup" id="closePopup">
+                <i class="far fa-times-circle"></i>
+            </span>
+            <span id="popupMessage"></span>
+        </div>   
+    </div>
+
     <!-- Header of page -->
 	<header class="home">
 
@@ -40,8 +50,13 @@
                         <li class="desktop"><a href=""><div class="cart"><span class="count">2</span></div><i class="fas fa-shopping-bag"></i></a></li>
                         <li class="desktop"><a href=""><i class="fas fa-search"></i></a></li>
 
-                        <li class="mobile"><i class="fas fa-bars"></i>
-                            <ul class="sub-menu">
+                        <li class="mobile"><i class="fas fa-bars" id="mobileIcon"></i></li>
+
+                        <div id="mobileMenu"> 
+                            <ul class="">
+                                <span class="closeMobileMenu" id="closeMenu">
+                                    <i class="far fa-times-circle"></i>
+                                </span>
                                 <li><a href="./index.html">HOME</a></li>
                                 <li><a href="">ABOUT</a></li>
                                 <li><a href="">RECIPES</a></li>
@@ -52,7 +67,7 @@
                                 <li><a href="">CART <div class="cartMobile"><span class="count">2</span></div></a></li>
                                 <li><a href="">SEARCH</a></li>
                             </ul>
-                        </li>
+                        </div>
                         
                         
                     </ul>
@@ -249,11 +264,24 @@ greens avocado quandong fennel gumbo black-eyed pea. Grape silver beet watercres
             </p>
 
             <!-- Form for leaving comments -->
-            <form class="commentForm" action="" method="POST">
-                <input type="text" name="name" placeholder="Name *" id="name">
-                <input type="text" name="email" placeholder="Email *" id="email">
-                <input type="text" name="website" placeholder="Your Website" id="website">
-                <textarea name="comment" id="specialInstructions" placeholder="Comment"></textarea>
+            <form class="commentForm" id="commentForm" action="" method="POST">
+
+                <div id="commentName">
+                    <input type="text" name="inputCommentName" placeholder="Name *" id="inputCommentName">
+                </div>
+
+                <div id="commentEmail">
+                    <input type="text" name="inputCommentEmail" placeholder="Email *" id="inputCommentEmail">
+                </div>
+
+                <div id="commentWebsite">
+                    <input type="text" name="inputCommentWebsite" placeholder="Your Website" id="inputCommentWebsite">
+                </div>
+
+                <div id="comment">
+                    <textarea name="inputComment" id="inputComment" placeholder="Comment *"></textarea>
+                </div>
+
                 <button type="submit" class="green" name="submit" id="submit">SUBMIT COMMENT</button>
             </form>
 
@@ -335,12 +363,12 @@ greens avocado quandong fennel gumbo black-eyed pea. Grape silver beet watercres
                 </div>
                 <div class="col">
                     
-                    <div class="row">
+                    <div class="row" id="subscribeFormParent">
                         <p>Get all of our newest recipes immediately in your inbox!</p>
                         <!-- Form for email subscription -->
-                        <form action="" method="POST">
+                        <form action="" method="POST" id="subscribeForm">
                             <div class="subscribeForm">
-                                <input type="text" name="email" placeholder="Enter your email" id="subscribeEmail">
+                                <input type="text" name="subscribeEmail" placeholder="Enter your email" id="subscribeEmail">
                                 <button type="submit" name="submit" id="subscribeSubmit"><i class="fas fa-long-arrow-alt-right"></i></button>
                             </div>
                         </form>
@@ -367,6 +395,8 @@ greens avocado quandong fennel gumbo black-eyed pea. Grape silver beet watercres
             </div>
         </div>
     </footer>
+
+    <script src="./scripts.js"></script>
 
 </body>
 </html>

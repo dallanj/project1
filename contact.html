@@ -21,7 +21,7 @@
     <!-- popup box -->
     <div id="popup" class="overlay">
         <div class="popup">
-            <span id="closePopup">
+            <span class="closePopup" id="closePopup">
                 <i class="far fa-times-circle"></i>
             </span>
             <span id="popupMessage"></span>
@@ -50,19 +50,24 @@
                         <li class="desktop"><a href=""><div class="cart"><span class="count">2</span></div><i class="fas fa-shopping-bag"></i></a></li>
                         <li class="desktop"><a href=""><i class="fas fa-search"></i></a></li>
 
-                        <li class="mobile"><i class="fas fa-bars"></i>
-                            <ul class="sub-menu">
+                        <li class="mobile"><i class="fas fa-bars" id="mobileIcon"></i></li>
+
+                        <div id="mobileMenu"> 
+                            <ul class="">
+                                <span class="closeMobileMenu" id="closeMenu">
+                                    <i class="far fa-times-circle"></i>
+                                </span>
                                 <li><a href="./index.html">HOME</a></li>
                                 <li><a href="">ABOUT</a></li>
                                 <li><a href="">RECIPES</a></li>
                                 <li><a href="">NUTRITION</a></li>
-                                <li><a href="./blog.html">BLOG</a></li>
+                                <li><a class="active">BLOG</a></li>
                                 <li><a href="">SHOP</a></li>
-                                <li><a class="active">CONTACT</a></li>
+                                <li><a href="./contact.html">CONTACT</a></li>
                                 <li><a href="">CART <div class="cartMobile"><span class="count">2</span></div></a></li>
                                 <li><a href="">SEARCH</a></li>
                             </ul>
-                        </li>
+                        </div>
                         
                         
                     </ul>
@@ -212,12 +217,12 @@
                 </div>
                 <div class="col">
                     
-                    <div class="row">
+                    <div class="row" id="subscribeFormParent">
                         <p>Get all of our newest recipes immediately in your inbox!</p>
                         <!-- Form for email subscription -->
-                        <form action="" method="POST">
+                        <form action="" method="POST" id="subscribeForm">
                             <div class="subscribeForm">
-                                <input type="text" name="email" placeholder="Enter your email" id="subscribeEmail">
+                                <input type="text" name="subscribeEmail" placeholder="Enter your email" id="subscribeEmail">
                                 <button type="submit" name="submit" id="subscribeSubmit"><i class="fas fa-long-arrow-alt-right"></i></button>
                             </div>
                         </form>
